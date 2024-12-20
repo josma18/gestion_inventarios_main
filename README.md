@@ -1,4 +1,4 @@
 # gestion_inventarios_main
-Proyecto de Servicio Web para exponer el sabado
-no olvidar completar esta parte
-para mañana
+Proyecto de Servicio Web 
+este proyecto va enfocado para la exposicion del lunes asi que debe de estar terminado pronto 
+<b>terminarlo cuanto antes</b>
