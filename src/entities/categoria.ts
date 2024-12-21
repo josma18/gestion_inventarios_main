@@ -18,6 +18,6 @@ export class Categoria {
     @CreateDateColumn({name: 'fecha_creacion_auditoria'})
     fechaCreacionAuditoria: Date;
 
-     @OneToMany(()=>Producto,(producto)=>producto.categoria)
-     productos: Producto[];
+    @OneToMany(()=>Producto,(producto)=>producto.categoria)
+    productos: Producto[];
 }
