@@ -1,4 +1,6 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, OneToMany, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Producto } from "./producto";
+
 
 @Entity('proveedores')
 export class Proveedor {
@@ -29,4 +31,6 @@ export class Proveedor {
     @CreateDateColumn({name: 'fecha_creacion_auditoria'})
     fechaCreacionAuditoria: Date;
 
+    @OneToMany(()=>Producto,(producto)=>producto.proveedor)
+     productos: Producto[];
 }

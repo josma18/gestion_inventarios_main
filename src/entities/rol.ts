@@ -1,10 +1,11 @@
 import { Column, CreateDateColumn, OneToMany, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { Producto } from "./producto";
+import { Usuario } from "./usuario";
 
-@Entity('categorias')
-export class Categoria {
-    @PrimaryGeneratedColumn({name: 'id_categoria'})
-    idCategoria: number;
+
+@Entity('roles')
+export class Rol {
+    @PrimaryGeneratedColumn({name: 'id_rol'})
+    idRol: number;
 
     @Column({name: 'nombre'})
     nombre: string;
@@ -18,6 +19,6 @@ export class Categoria {
     @CreateDateColumn({name: 'fecha_creacion_auditoria'})
     fechaCreacionAuditoria: Date;
 
-     @OneToMany(()=>Producto,(producto)=>producto.categoria)
-     productos: Producto[];
+    @OneToMany(()=>Usuario,(usuario)=>usuario.rol)
+    usuarios: Usuario[];
 }
