@@ -1,6 +1,5 @@
-import { Column, CreateDateColumn, OneToMany, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Usuario } from "./usuario";
-
 
 @Entity('roles')
 export class Rol {

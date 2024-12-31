@@ -17,7 +17,10 @@ export const listarUsuarios = async (): Promise<Usuario[]> => {
 }
 
 export const obtenerUsuario = async (idUsuario: number): Promise<Usuario> => {
-    return await repository.findOne({where: { idUsuario, estadoAuditoria: EstadoAuditoria.ACTIVO }});
+    return await repository.findOne({
+        where: { idUsuario, estadoAuditoria: EstadoAuditoria.ACTIVO },
+        relations: ['rol']
+    });
 }
 
 export const actualizarUsuario = async (idUsuario: number, data: Partial<Usuario>): Promise<Usuario> => {

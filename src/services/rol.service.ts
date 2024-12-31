@@ -13,29 +13,15 @@ export const listarRol = async (): Promise<Rol[]> => {
     return await repository.find({where: { estadoAuditoria: EstadoAuditoria.ACTIVO }});
 }
 
-export const obtenerRol = async (idRol: number): Promise<Rol> => {
-    return await repository.findOne({where: { idRol, estadoAuditoria: EstadoAuditoria.ACTIVO }});
+export const obtenerRol = async (idRol: number) => {
+    return await repository.findOne({where: {estadoAuditoria: EstadoAuditoria.ACTIVO,idRol}})
 }
 
-export const actualizarRol = async (idRol: number, data: Partial<Rol>): Promise<Rol> => {
-   await repository.update(idRol,data);
-   return obtenerRol(idRol);
+export const actualizarRol = async (idRol: number, data: Partial<Rol>) => {
+    await repository.update(idRol,data);
+    return obtenerRol (idRol);
 }
 
-export const darBajaRol = async (idRol: number): Promise<void> => {
-    await repository.update(idRol,{estadoAuditoria: EstadoAuditoria.INACTIVO});
+export const darBajaRol = async (idRol: number) => {
+    return repository.update(idRol, { estadoAuditoria: EstadoAuditoria.INACTIVO});
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,7 @@
-export enum Message {
-    INSERTADO_OK = 'Insertado Correctamente',
-    ACTUALIZADO_OK = 'Actualizado Correctamente',
-    ELIMINADO_OK = 'Eliminado Correctamente',
+export enum message {
+    INSERTADO_OK = 'Se ha insertado correctamente',
+    ACTUALIZADO_OK = 'Se ha actualizado correctamente',
+    ELIMINADO_OK = 'Se ha eliminado correctamente',
 
     NOT_FOUND = 'Recurso no ha sido encontrado'
-
 }

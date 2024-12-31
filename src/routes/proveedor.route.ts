@@ -1,5 +1,5 @@
-import { Router } from 'express';
-import { actualizarProveedor, darBajaProveedor, insertarProveedor, listarProveedor, obtenerProveedor } from '../controllers/proveedor.controller';
+import { Router, } from "express";
+import { actualizarProveedor, darBajaProveedor, insertarProveedor, listarProveedor, obtenerProveedor } from "../controllers/proveedor.controller";
 
 const router: Router = Router();
 
